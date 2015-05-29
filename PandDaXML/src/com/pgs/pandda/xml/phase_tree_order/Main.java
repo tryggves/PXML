@@ -6,7 +6,10 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		CreateData cd = new CreateData();
+		
+		cd.makePhaseGroupType("Phase-test", 1);
+		cd.marshal();
 
 	}
 

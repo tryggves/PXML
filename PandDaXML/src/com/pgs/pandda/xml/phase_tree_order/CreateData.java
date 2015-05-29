@@ -2,6 +2,11 @@ package com.pgs.pandda.xml.phase_tree_order;
 
 import java.util.List;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
 import com.pgs.pandda.xml.ObjectFactory;
 import com.pgs.pandda.xml.PhaseGroupType;
 import com.pgs.pandda.xml.PhaseTreeOrderTemplate;
@@ -28,5 +33,16 @@ public class CreateData {
 	
 	public PhaseTreeOrderTemplate getPhaseTreeOrderTemplate () {
 		return ptot;
+	}
+	
+	public void marshal() {
+        try {
+            JAXBContext jc = JAXBContext.newInstance( "com.pgs.pandda.xml" );
+            Marshaller m = jc.createMarshaller();
+            m.marshal( ptot, System.out );
+        } catch( JAXBException jbe ){
+            // ...
+        	System.err.print(jbe);
+        }
 	}
 }
