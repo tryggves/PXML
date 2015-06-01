@@ -1,0 +1,5 @@
+HOW TO GENERATE THE JAXB CLASSES.
+
+Run the following command to generate the JAXB classes.
+
+$ xjc -p com.pgs.pandda.xml -d src phase_tree_order.xsd

@@ -23,12 +23,35 @@ public class CreateData {
 		ptot = objFact.createPhaseTreeOrderTemplate();
 	}
 
+	// Create a phase group and add it to the list of phases/phase groups
 	public void makePhaseGroupType (String pgName, int pgIndex) {
+		
 		PhaseGroupType pg = objFact.createPhaseGroupType();
 		pg.setName(pgName);
 		pg.setIndex(new Integer(pgIndex));
 		
-		ptot.setPhaseGroup(pg);
+		ptot.getPhaseGroupOrPhase().add(pg);
+	}
+	
+	// Create a Phase with name and index
+	public PhaseType makePhaseType (String phName, int phIndex) {
+		PhaseType pt = objFact.createPhaseType();
+		pt.setIndex(phIndex);
+		pt.setName(phName);
+		
+		return pt;
+	}
+	
+	// Add Phase to phase group
+	public void addPhaseToPhaseGroup (PhaseType pt) {
+		PhaseGroupType pg;
+		
+		try {
+			pg = (PhaseGroupType) ptot.getPhaseGroupOrPhase().get(0);
+			pg.getPhase().add(pt);
+		} catch (IndexOutOfBoundsException ie) {
+			System.err.println(ie);
+		}
 	}
 	
 	public PhaseTreeOrderTemplate getPhaseTreeOrderTemplate () {
