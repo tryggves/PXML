@@ -6,7 +6,7 @@
 	<xsd:element name="phaseTreeOrderTemplate">
 		<xsd:complexType>
 			<xsd:choice minOccurs="1" maxOccurs="unbounded">
-				<xsd:element name="PhaseGroup" type="PhaseGroupType"/>
+				<xsd:element name="Group" type="PhaseGroupType"/>
 				<xsd:element name="Phase" type="PhaseType"/>
 			</xsd:choice>
 		</xsd:complexType>

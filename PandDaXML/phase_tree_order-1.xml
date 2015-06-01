@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<phaseTreeOrderTemplate xmlns="http://www.pgs.com/phase_tree_order">
+ <Group index="0" name="Phase_Testgroup">
+  <Phase index="0" name="Phase_test"/>
+  <Phase index="1" name="Phase_test2"/>
+ </Group>
+ <Group index="1" name="Production_Group">
+  <Phase index="0" name="Normalize"/>
+ </Group>
+ <Group index="2" name="Production2_Group">
+  <Phase index="0" name="Phase_pre"/>
+ </Group>
+ <Phase index="3" name="Phase3059"/>
+</phaseTreeOrderTemplate>

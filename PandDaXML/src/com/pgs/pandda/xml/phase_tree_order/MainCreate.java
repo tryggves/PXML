@@ -2,7 +2,7 @@ package com.pgs.pandda.xml.phase_tree_order;
 
 import com.pgs.pandda.xml.PhaseType;
 
-public class Main {
+public class MainCreate {
 
 	/**
 	 * @param args

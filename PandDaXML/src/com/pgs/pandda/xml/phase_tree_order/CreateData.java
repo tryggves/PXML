@@ -30,7 +30,7 @@ public class CreateData {
 		pg.setName(pgName);
 		pg.setIndex(new Integer(pgIndex));
 		
-		ptot.getPhaseGroupOrPhase().add(pg);
+		ptot.getGroupOrPhase().add(pg);
 	}
 	
 	// Create a Phase with name and index
@@ -47,7 +47,7 @@ public class CreateData {
 		PhaseGroupType pg;
 		
 		try {
-			pg = (PhaseGroupType) ptot.getPhaseGroupOrPhase().get(0);
+			pg = (PhaseGroupType) ptot.getGroupOrPhase().get(0);
 			pg.getPhase().add(pt);
 		} catch (IndexOutOfBoundsException ie) {
 			System.err.println(ie);
