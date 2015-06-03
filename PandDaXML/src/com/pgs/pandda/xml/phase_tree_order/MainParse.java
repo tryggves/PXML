@@ -23,7 +23,7 @@ public class MainParse {
 		
 		// Get input stream from file
 		try {
-			FileInputStream fileInputStream = new FileInputStream("phase_tree_order-1.xml");
+			FileInputStream fileInputStream = new FileInputStream("phase_tree_order.xml");
 			doc = pd.unmarshall(PhaseTreeOrderTemplate.class, fileInputStream);
 			List<Object> l = (List<Object>) doc.getGroupOrPhase();
 		} catch (FileNotFoundException fe) {
