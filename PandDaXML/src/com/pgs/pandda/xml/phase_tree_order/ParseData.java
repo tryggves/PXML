@@ -9,6 +9,8 @@ import javax.xml.bind.Unmarshaller;
 
 public class ParseData {
 	
+	public 
+	
 	public <T> T unmarshall (Class<T> docClass, InputStream inputStream) throws JAXBException{
 		String packageName = docClass.getPackage().getName();
 		JAXBContext jc = JAXBContext.newInstance(packageName);
