@@ -12,7 +12,11 @@ public class Phase {
 	private static Logger logger = Logger.getLogger(Phase.class.getName());
 	
 	private String phaseName;			// The name of the phase
-		private ChainOrder chainOrder;		// A phase contains one Chain order
+	private ChainOrder chainOrder;		// A phase contains one and only one Chain order
+	
+	public Phase () {
+		chainOrder = new ChainOrder ();
+	}
 	
 	public ChainOrder getChainOrder () {
 		return chainOrder;

@@ -7,9 +7,8 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-public class ParseData {
+public class DataParser {
 	
-	public 
 	
 	public <T> T unmarshall (Class<T> docClass, InputStream inputStream) throws JAXBException{
 		String packageName = docClass.getPackage().getName();

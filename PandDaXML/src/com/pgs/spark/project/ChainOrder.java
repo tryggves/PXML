@@ -25,4 +25,7 @@ public class ChainOrder {
 	public List<Task> getTasks () {
 		return tasks;
 	}
+	
+	// TODO:
+	// Get number of tasks in this chain order
 }
