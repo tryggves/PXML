@@ -1,0 +1,31 @@
+<!DOCTYPE PandDa>
+<taskEditorTemplate>
+ <version count="3.0"/>
+ <TaskEnv>
+  <parameter value="" name="GUI_DDSROOT"/>
+  <parameter value="/pgs/cm/cm-3.4.4" name="GUI_CM_HOME"/>
+  <parameter value="/pgs/cm/cm-3.4.2" name="Release CM_HOME"/>
+  <parameter value="cm-3.4.2" name="Release Version"/>
+  <parameter value="/pgs/cm/cm-3.4.2" name="Release Home"/>
+ </TaskEnv>
+ <projectName name="tryggvesp"/>
+ <TaskInformation>
+  <parameter value="/datadb/tryggvesp/job/TEST1.job" name="Assign template:"/>
+  <parameter value="" name="Assign auxiliary database:"/>
+  <parameter value="Choose PDB" name="Assign database:"/>
+  <parameter value="Choose TL_aux" name="Assign transfer list:"/>
+  <parameter value="LOCAL(XXX)" name="Site Name:"/>
+  <parameter value="LT_STANDALONE" name="Task type:"/>
+ </TaskInformation>
+ <JobCardInformation>
+  <parameter value="osgpc000" name="Cube Name:"/>
+  <parameter value="low" name="Job Priority:"/>
+  <parameter value="0" name="Disk space needed:"/>
+  <parameter value="20" name="Order:"/>
+  <parameter value="48:00" name="Estimated Runtime:"/>
+  <parameter value="" name="User Comments:"/>
+  <parameter value="" name="Job type:"/>
+  <parameter value="" name="User e-mail address:"/>
+ </JobCardInformation>
+ <Summary/>
+</taskEditorTemplate>

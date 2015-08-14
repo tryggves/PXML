@@ -13,9 +13,9 @@ import org.apache.log4j.Logger;
  */
 public class ChainOrder {
 	private static Logger logger = Logger.getLogger(ChainOrder.class.getName());
+	private String chordDirectoryRef;	// This is the directory name of the chain order
 	
-	// List of Tasks
-	List<Task> tasks;
+	private List<Task> tasks; 			// List of Tasks
 	
 	// Initialize the ordered list
 	public ChainOrder () {
@@ -26,6 +26,14 @@ public class ChainOrder {
 		return tasks;
 	}
 	
+	public void setChordDirectoryRef(String chordDirectoryRef) {
+		this.chordDirectoryRef = chordDirectoryRef;
+	}
+	
+	public String getChordDirectoryRef () {
+		return this.chordDirectoryRef;
+	}
+
 	// TODO:
 	// Get number of tasks in this chain order
 }

@@ -1,0 +1,10 @@
+<!DOCTYPE ProjectML>
+<ChainOrderTemplate>
+ <center scale-factor="1" coordinate-x="312" coordinate-y="484"/>
+ <TaskInformation>
+  <task-parameter positionX="277" positionY="261" name="read_seqy" color="#00ffff" releaseVersion="cm"/>
+  <task-parameter positionX="276" positionY="94" name="GenerateData" color="#ffffff" releaseVersion="cm"/>
+ </TaskInformation>
+ <ArrowInformation/>
+ <CommentInformation/>
+</ChainOrderTemplate>

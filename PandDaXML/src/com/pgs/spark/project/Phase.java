@@ -14,6 +14,7 @@ public class Phase {
 	private String phaseName;			// The name of the phase
 	private ChainOrder chainOrder;		// A phase contains one and only one Chain order
 	
+	
 	public Phase () {
 		chainOrder = new ChainOrder ();
 	}

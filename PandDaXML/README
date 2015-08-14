@@ -1,5 +1,15 @@
 HOW TO GENERATE THE JAXB CLASSES.
 
 Run the following command to generate the JAXB classes.
+$ cd ~/git/PXML/PandDaXML
 
 $ xjc -p com.pgs.pandda.xml -d src phase_tree_order.xsd
+$ xjc -p com.pgs.pandda.xml.phase_ref -d src phase_dir_index.xsd
+$ xjc -p com.pgs.pandda.xml.chainordereditor -d src PhaseChainOrderEditor.xsd
+$ xjc -p com.pgs.pandda.xml.task -d src TaskSchema.xsd
+
+MAIN CLASS
+
+Run the main program from class MainParse.java
+The program optionally takes one parameter: project name
+If not given on the command line the default test project will take precedence.
