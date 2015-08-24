@@ -1,6 +1,6 @@
 package com.pgs.pandda.xml.phase_tree_order;
 
-import com.pgs.pandda.xml.PhaseType;
+import com.pgs.pandda.xml.project.PhaseType;
 
 public class MainCreate {
 

@@ -6,7 +6,7 @@
 //
 
 
-package com.pgs.pandda.xml;
+package com.pgs.pandda.xml.project;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

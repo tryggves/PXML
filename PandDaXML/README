@@ -3,9 +3,16 @@ HOW TO GENERATE THE JAXB CLASSES.
 Run the following command to generate the JAXB classes.
 $ cd ~/git/PXML/PandDaXML
 
+## This is the top level project information file
 $ xjc -p com.pgs.pandda.xml -d src phase_tree_order.xsd
+
+## This isthe reference to phase directory
 $ xjc -p com.pgs.pandda.xml.phase_ref -d src phase_dir_index.xsd
+
+## This is the chain order information (all tasks) for a given phase
 $ xjc -p com.pgs.pandda.xml.chainordereditor -d src PhaseChainOrderEditor.xsd
+
+## This is the task information for a single task
 $ xjc -p com.pgs.pandda.xml.task -d src TaskSchema.xsd
 
 MAIN CLASS

@@ -9,18 +9,18 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import javax.xml.bind.JAXBException;
 
-import com.pgs.pandda.xml.PhaseGroupType;
-import com.pgs.pandda.xml.PhaseTreeOrderTemplate;
-import com.pgs.pandda.xml.PhaseType;
+import com.pgs.pandda.project.ChainOrder;
+import com.pgs.pandda.project.PandDaProject;
+import com.pgs.pandda.project.Phase;
+import com.pgs.pandda.project.Task;
 import com.pgs.pandda.xml.chainordereditor.ChainOrderTemplate;
 import com.pgs.pandda.xml.chainordereditor.ChainOrderTemplate.TaskInformation.TaskParameter;
 import com.pgs.pandda.xml.phase_ref.RefFileTemplate;
+import com.pgs.pandda.xml.project.PhaseGroupType;
+import com.pgs.pandda.xml.project.PhaseTreeOrderTemplate;
+import com.pgs.pandda.xml.project.PhaseType;
 import com.pgs.pandda.xml.task.TaskEditorTemplate;
 import com.pgs.pandda.xml.task.TaskEditorTemplate.TaskInformation.Parameter;
-import com.pgs.spark.project.ChainOrder;
-import com.pgs.spark.project.PandDaProject;
-import com.pgs.spark.project.Phase;
-import com.pgs.spark.project.Task;
 
 public class MainParse {
 	private static Logger logger = Logger.getLogger(MainParse.class.getName());
@@ -55,7 +55,7 @@ public class MainParse {
 			
 			FileInputStream fileInputStream = new FileInputStream(projectFileName);
 			
-			logger.info("Unmarshal");
+			logger.debug ("Unmarshal the project XML file...");
 			doc = pd.unmarshall(PhaseTreeOrderTemplate.class, fileInputStream);
 			
 			// Build the domain model for the project.
@@ -64,7 +64,7 @@ public class MainParse {
 			project.setProjectName("3764pgs");
 			
 			List<Object> l = (List<Object>) doc.getGroupOrPhase();
-			logger.info("Got list of " + l.size() +" members.");
+			logger.debug("Got list of " + l.size() +" members.");
 			
 			// Traverse the list of phase groups/phases
 			for (Object obj: l) {
@@ -236,8 +236,9 @@ public class MainParse {
 				
 			// TODO: More robust error handling needed.
 		} catch (FileNotFoundException fe) {
-			logger.error(fe);
-			System.exit(1);
+			logger.error("Open input file failed : " + fe);
+			// Don't exit here, just return to caller to allow for further processing.
+			return;
 		} catch (JAXBException je) {
 			System.err.println (je);
 			System.exit(1);

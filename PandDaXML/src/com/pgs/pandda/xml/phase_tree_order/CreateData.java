@@ -7,10 +7,10 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import com.pgs.pandda.xml.ObjectFactory;
-import com.pgs.pandda.xml.PhaseGroupType;
-import com.pgs.pandda.xml.PhaseTreeOrderTemplate;
-import com.pgs.pandda.xml.PhaseType;
+import com.pgs.pandda.xml.project.ObjectFactory;
+import com.pgs.pandda.xml.project.PhaseGroupType;
+import com.pgs.pandda.xml.project.PhaseTreeOrderTemplate;
+import com.pgs.pandda.xml.project.PhaseType;
 
 
 public class CreateData {

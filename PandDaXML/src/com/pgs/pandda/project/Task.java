@@ -1,4 +1,4 @@
-package com.pgs.spark.project;
+package com.pgs.pandda.project;
 
 import org.apache.log4j.Logger;
 
